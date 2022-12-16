@@ -3,7 +3,7 @@
 
 double pifagor(int x, int y);
 
-void output(int a, int b);
+void output(char name, int param);
 
 void main()
 {
@@ -30,7 +30,8 @@ void main()
 	paramB = (pifagor(bx, by) == r) ? 1 : paramB;
 	paramB = (pifagor(bx, by) > r) ? 2 : paramB;
 
-	printf("A - %d B - %d", paramA, paramB);
+	output('A', paramA);
+	output('B', paramB);
 }
 
 double pifagor(int x, int y)
@@ -38,8 +39,8 @@ double pifagor(int x, int y)
 	return pow((x*x + y*y),0.5);
 }
 
-void output(int a, int b)
+void output(char name, int param)
 {
 	int r;
-	r = (a)
+	r = (param == 0) ? printf("%c is in circle\n", name) : (param == 1) ? printf("%c is on circle\n", name) : printf("%c is out from circle\n", name);
 }
